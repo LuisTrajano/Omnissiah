@@ -1,0 +1,168 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap";
+
+
+:root {
+--color-brushedsteel: #b0b3b7;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body{
+    background: black;
+    font-family: 'Roboto Slab', serif;
+
+}
+header {
+    
+    border-bottom: 1px solid red;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.links {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+
+}
+
+.links a {
+    color: var(--color-brushedsteel);
+    font-size: 22px;
+    line-height: 32px;
+    margin: 0 16px;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: #cd7f32;
+    transition: color 300ms;
+}
+
+#corpo {
+text-align: center;
+padding: 32px;
+color: var(--color-brushedsteel);
+
+}
+
+#corpo img {
+    border-radius: 50%; /* Tremendamente inútil neste caso. */
+    border: 5px solid #b0b3b7;
+    height: 210px;
+}
+
+#corpo h1 {
+    font-size: 20px;
+    line-height: 52px;
+    font-weight:"/"; /* Inútil neste caso. */
+    margin-top: 8px;
+}
+
+#corpo h2{
+    font-size: 23px;
+    line-height: 60px;
+    margin-top: 8px;
+}
+
+#corpo p {
+    max-width: 500px;
+    font-size: 18px;
+    line-height: 23px;
+    margin: 0 auto;
+}
+
+#corpo p a{
+    color: var(--color-brushedsteel);
+    text-decoration: none;
+
+}
+
+#corpo p a:hover {
+    color: #cd7f32;
+    transition: color 300ms;
+}
+
+#links-footer a{
+    border-bottom: 1px solid var(--color-brushedsteel);
+}
+
+/*==== Cards ====*/
+.cards {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 80px;
+}
+
+.card {
+    background-color: var(--color-brushedsteel);
+}
+
+.card__image-container img {
+    width: 100%;
+}
+
+.card__content,
+.card__info {
+    padding: 24px;
+}
+
+.card__info {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card__price {
+    background-color: var(--color-brushedsteel);
+    filter: brightness(90%);
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* === MODAL === */
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.modal .close-modal {
+    color:black;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+}
+
+/* === MODAL.ACTIVE === */
+
+.modal-overlay.active {
+opacity: 1;
+visibility: visible;
+}
+
+iframe {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+}
